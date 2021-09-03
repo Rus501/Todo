@@ -15,27 +15,21 @@ module.exports = {
            test:/\.(s*)css$/,
            exclude: /node_modules/,
            use: [ miniCss.loader, 
-           {
-            loader: 'css-loader',
-            options: {
-               url: false
-            }
-           },
-              {
-                 loader: 'postcss-loader',
-                 options: {
-                    postcssOptions: {
-                       plugins: ['autoprefixer']
-                    },
-                 },
-              },
-              'sass-loader', ],
+                  'css-loader',
+                  {
+                     loader: 'postcss-loader',
+                     options: {
+                        postcssOptions: {
+                           plugins: ['autoprefixer']
+                        },
+                     },
+                  },
+                  'sass-loader',
+                ],
          },
          {
             test: /\.(png|jpg)$/,
-            use: [
-               'file-loader',
-            ]
+            type: 'asset/inline'
          },
       ],
    },
