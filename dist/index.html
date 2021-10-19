@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="favicon.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize-css@2.3.1/normalize.css">
-	<link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<title>Todo List</title>
-</head>
-<body>
-	<main>
-		<section>
-			<div class="header">
-				<img class="icon" alt="Tasks Icon">
-				<h1>To do List</h1>
-			</div>
-			<div class="todo-list">
-				
-			</div>
-			<div class="modal-container">
-				<form>
-					<div>
-						<label for="title">Task title:</label>
-						<input type="text" name="title" placeholder="Title" value="">
-						<label for="description">Task description:</label>
-						<textarea name="description" placeholder="Description"></textarea>
-					</div>
-					<div>
-						<label for="date">Due date:</label>
-						<input type="date" name="date">
-						<label for="priority">Priority:</label>
-						<select name="priority">
-							<option value="high">High</option>
-							<option value="mid">Mid</option>
-							<option value="low">Low</option>
-						</select>
-						<input type="submit" value="Add Task">
-					</div>
-					<p class="close-modal">X</p>
-				</form>
-			</div>
-			<button class="add-todo"></button>
-		</section>
-	</main>
-	<script src="bundle.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize-css@2.3.1/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="header">
+          <img class="icon" alt="Tasks Icon" />
+          <h1>To do List</h1>
+        </div>
+        <div class="todo-list"></div>
+        <div class="modal-container">
+          <form>
+            <div>
+              <label for="title">Task title:</label>
+              <input
+                id="title"
+                type="text"
+                name="title"
+                placeholder="Title"
+                value=""
+                required
+              />
+              <label for="description">Task description:</label>
+              <textarea
+                id="description"
+                name="description"
+                placeholder="Description"
+              ></textarea>
+            </div>
+            <div>
+              <label for="date">Due date:</label>
+              <input id="date" type="date" name="date" />
+              <label for="priority">Priority:</label>
+              <select id="priority" name="priority">
+                <option value="high">High</option>
+                <option value="mid">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <input type="submit" value="Add Task" />
+            </div>
+            <p class="close-modal">X</p>
+          </form>
+        </div>
+        <button class="add-todo"></button>
+      </section>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
 </html>
